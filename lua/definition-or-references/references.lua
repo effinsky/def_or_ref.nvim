@@ -9,16 +9,16 @@ local function handle_references_response(context)
 
   if not result_entries or vim.tbl_isempty(result_entries) then
     if methods.definitions.result and #methods.definitions.result > 0 then
-      vim.notify("Cursor on definition and no references found")
+      -- vim.notify("Cursor on definition and no references found")
     elseif not methods.definitions.result or #methods.definitions.result == 0 then
-      vim.notify("No definition or references found")
+      -- vim.notify("No definition or references found")
     end
     return
   end
 
   if #result_entries == 1 then
     if methods.definitions.result and #methods.definitions.result > 0 then
-      vim.notify("Curson on definition and only one reference found")
+      -- vim.notify("Cursor on definition and only one reference found")
     elseif not methods.definitions.result or #methods.definitions.result == 0 then
       vim.notify("No definition but single reference found")
     end
